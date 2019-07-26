@@ -6,14 +6,13 @@
     <div *ngIf="parsedCSV != undefined" leaflet class="map"
          [leafletOptions]="options"
          [(leafletCenter)]="center">
-
     </div>
     <br>
     <p class="card-text">Place your answer here:</p>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{rightAnswer}}</button>
-      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{wrongAnswer1}}</button>
-      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{wrongAnswer2}}</button>
+      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{answer1}}</button>
+      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{answer2}}</button>
+      <button (click)="checkForAnswer()" type="button" href="#!" class="btn btn-outline-primary waves-effect">{{answer3}}</button>
     </div>
   </div>
 </div>

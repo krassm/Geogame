@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {latLng, tileLayer} from 'leaflet';
 import * as papa from 'papaparse';
 import {HttpClient} from '@angular/common/http';
+import index from '@angular/cli/lib/cli';
 
 @Component({
   selector: 'app-map',
@@ -19,23 +20,22 @@ export class MapComponent implements OnInit {
   wrongAnswer2: any;
   lat: number;
   lon: number;
+  answer1: any;
+  answer2: any;
+  answer3: any;
 
   constructor(private http: HttpClient) {
     this.importFromCSV();
   }
 
   ngOnInit() {
-
     window.alert('Are you ready to test your knowledge?');
-
-
-
     this.loadData();
-
   }
 
   loadData() {
     this.chooseRandomCity();
+    this.randomizeAnswers();
     this.setMapOptions();
   }
 
@@ -50,10 +50,21 @@ export class MapComponent implements OnInit {
     );
   }
 
+  randomizeAnswers() {
+    const array: Array<string> = [this.rightAnswer, this.wrongAnswer1, this.wrongAnswer2];
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    this.answer1 = array[0];
+    this.answer2 = array[1];
+    this.answer3 = array[2];
+  }
+
   chooseRandomCity() {
-    let rightIndex = Math.floor(Math.random() * 60) + 1;
-    let wrongIndex1 = Math.floor(Math.random() * 60) + 1;
-    let wrongIndex2 = Math.floor(Math.random() * 60) + 1;
+    let rightIndex = Math.floor(Math.random() * 59) + 1;
+    let wrongIndex1 = Math.floor(Math.random() * 59) + 1;
+    let wrongIndex2 = Math.floor(Math.random() * 59) + 1;
 
     while (rightIndex === wrongIndex1 || rightIndex === wrongIndex2 || wrongIndex1 === wrongIndex2) {
       rightIndex = Math.floor(Math.random() * 59) + 1;

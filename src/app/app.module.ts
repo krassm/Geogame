@@ -9,12 +9,19 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet/src/leaflet/leaflet.module';
 import {PapaParseModule} from 'ngx-papaparse';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { ContributeMapComponent } from './contribute-map/contribute-map.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    NavigationComponent
+    NavigationComponent,
+    LoginComponent,
+    ContributeMapComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     LeafletModule.forRoot(),
     PapaParseModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
