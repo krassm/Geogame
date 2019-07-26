@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <a class="navbar-brand" href="#">GeoGame</a>
+
+  <button class="navbar-toggler text-right" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" [ngClass]="{'show': navbarOpen}">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/game" routerLinkActive="active">Play the Game</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contribute" routerLinkActive="active">Contribute</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

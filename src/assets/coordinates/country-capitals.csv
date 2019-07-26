@@ -1,0 +1,59 @@
+Country,City,Lat,Lon,Code,Region
+Aland Islands,Mariehamn,60.116667,19.900000,AX,Europe
+Albania,Tirana,41.31666666666667,19.816667,AL,Europe
+Andorra,Andorra la Vella,42.5,1.516667,AD,Europe
+Armenia,Yerevan,40.166666666666664,44.500000,AM,Europe
+Austria,Vienna,48.2,16.366667,AT,Europe
+Azerbaijan,Baku,40.38333333333333,49.866667,AZ,Europe
+Belarus,Minsk,53.9,27.566667,BY,Europe
+Belgium,Brussels,50.833333333333336,4.333333,BE,Europe
+Bosnia and Herzegovina,Sarajevo,43.86666666666667,18.416667,BA,Europe
+Bulgaria,Sofia,42.68333333333333,23.316667,BG,Europe
+Croatia,Zagreb,45.8,16.000000,HR,Europe
+Cyprus,Nicosia,35.166666666666664,33.366667,CY,Europe
+Czech Republic,Prague,50.083333333333336,14.466667,CZ,Europe
+Denmark,Copenhagen,55.666666666666664,12.583333,DK,Europe
+Estonia,Tallinn,59.43333333333333,24.716667,EE,Europe
+Faroe Islands,Torshavn,62,-6.766667,FO,Europe
+Finland,Helsinki,60.166666666666664,24.933333,FI,Europe
+France,Paris,48.86666666666667,2.333333,FR,Europe
+Georgia,Tbilisi,41.68333333333333,44.833333,GE,Europe
+Germany,Berlin,52.516666666666666,13.400000,DE,Europe
+Gibraltar,Gibraltar,36.13333333333333,-5.350000,GI,Europe
+Greece,Athens,37.983333333333334,23.733333,GR,Europe
+Guernsey,Saint Peter Port,49.45,-2.533333,GG,Europe
+Vatican City,Vatican City,41.9,12.450000,VA,Europe
+Hungary,Budapest,47.5,19.083333,HU,Europe
+Iceland,Reykjavik,64.15,-21.950000,IS,Europe
+Ireland,Dublin,53.31666666666667,-6.233333,IE,Europe
+Isle of Man,Douglas,54.15,-4.483333,IM,Europe
+Italy,Rome,41.9,12.483333,IT,Europe
+Jersey,Saint Helier,49.18333333333333,-2.100000,JE,Europe
+Kosovo,Pristina,42.666666666666664,21.166667,KO,Europe
+Latvia,Riga,56.95,24.100000,LV,Europe
+Liechtenstein,Vaduz,47.13333333333333,9.516667,LI,Europe
+Lithuania,Vilnius,54.68333333333333,25.316667,LT,Europe
+Luxembourg,Luxembourg,49.6,6.116667,LU,Europe
+Macedonia,Skopje,42,21.433333,MK,Europe
+Malta,Valletta,35.88333333333333,14.500000,MT,Europe
+Moldova,Chisinau,47,28.850000,MD,Europe
+Monaco,Monaco,43.733333333333334,7.416667,MC,Europe
+Montenegro,Podgorica,42.43333333333333,19.266667,ME,Europe
+Netherlands,Amsterdam,52.35,4.916667,NL,Europe
+Norway,Oslo,59.916666666666664,10.750000,NO,Europe
+Poland,Warsaw,52.25,21.000000,PL,Europe
+Portugal,Lisbon,38.71666666666667,-9.133333,PT,Europe
+Romania,Bucharest,44.43333333333333,26.100000,RO,Europe
+Russia,Moscow,55.75,37.600000,RU,Europe
+San Marino,San Marino,43.93333333333333,12.416667,SM,Europe
+Serbia,Belgrade,44.833333333333336,20.500000,RS,Europe
+Slovakia,Bratislava,48.15,17.116667,SK,Europe
+Slovenia,Ljubljana,46.05,14.516667,SI,Europe
+Spain,Madrid,40.4,-3.683333,ES,Europe
+Svalbard,Longyearbyen,78.21666666666667,15.633333,SJ,Europe
+Sweden,Stockholm,59.333333333333336,18.050000,SE,Europe
+Switzerland,Bern,46.916666666666664,7.466667,CH,Europe
+Turkey,Ankara,39.93333333333333,32.866667,TR,Europe
+Ukraine,Kyiv,50.43333333333333,30.516667,UA,Europe
+United Kingdom,London,51.5,-0.083333,GB,Europe
+Cyprus,Nicosia,35.183333,33.366667,NULL,Europe
