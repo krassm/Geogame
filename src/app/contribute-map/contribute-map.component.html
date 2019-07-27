@@ -4,10 +4,15 @@
     <h6 class="card-subtitle mb-2 text-muted">Anleitung lorem ipsum, halskjdsalkdjvhjkdfla jsd ölfijsdglövkj lkj klsdf ji sf</h6>
     <br>
     <div leaflet class="map"
-         [leafletOptions]="options">
+         [leafletOptions]="options"
+         [(leafletZoom)]="zoom"
+         [(leafletCenter)]="center"
+         (leafletMapReady)="onMapReady($event)"
+         [leafletLayer]="layers"
+    >
+      <div *ngIf="positionIsSet then updateMap()" [leafletLayer]="layers"></div>
     </div>
     <br>
     <p class="card-text">Add the name of the city here: </p>
-
   </div>
 </div>
