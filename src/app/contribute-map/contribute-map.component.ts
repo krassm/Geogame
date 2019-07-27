@@ -48,21 +48,25 @@ export class ContributeMapComponent implements OnInit {
     map.on('click', <LeafletMouseEvent>(e) => {
       this.eventLat = e.latlng.lat;
       this.eventLon = e.latlng.lng;
+      this.eventPositionIsSet = true;
       console.log('Se clicked position: ' + this.eventLat + ' ' + this.eventLon);
     });
   }
 
   updateMarker() {
-    console.log('i updated the markker i promise with the following coordinates :');
-    this.layers = marker([this.eventLat, this.eventLon], {
-      // This is nessasary because the module hast problems with marker icons
-      icon: icon({
-        iconSize: [25, 41],
-        iconAnchor: [13, 41],
-        iconUrl: 'assets/marker-icon.png',
-        shadowUrl: 'assets/marker-shadow.png'
-      })
-    });
+    if (this.eventLon !== undefined) {
+      console.log('i updated the markker i promise with the following coordinates :');
+      this.layers = marker([this.eventLat, this.eventLon], {
+        // This is nessasary because the module hast problems with marker icons
+        icon: icon({
+          iconSize: [25, 41],
+          iconAnchor: [13, 41],
+          iconUrl: 'assets/marker-icon.png',
+          shadowUrl: 'assets/marker-shadow.png'
+        })
+      });
+      this.eventPositionIsSet = false;
+    }
   }
 
   getPosition() {

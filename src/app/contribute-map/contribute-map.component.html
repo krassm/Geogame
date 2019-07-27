@@ -8,9 +8,11 @@
          [(leafletZoom)]="zoom"
          [(leafletCenter)]="center"
          (leafletMapReady)="onMapReady($event)"
-         [leafletLayer]="layers"
-    >
+         (leafletClick)="updateMarker()"
+         [leafletLayer]="layers">
+
       <div *ngIf="positionIsSet then updateMap()" [leafletLayer]="layers"></div>
+
     </div>
     <br>
     <p class="card-text">Add the name of the city here: </p>
