@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ContributeMapComponent } from './contribute-map.component';
+import {ContributeMapComponent} from './contribute-map.component';
 
 describe('ContributeMapComponent', () => {
   let component: ContributeMapComponent;

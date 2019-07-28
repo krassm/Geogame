@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {latLng, tileLayer} from 'leaflet';
 import * as papa from 'papaparse';
 import {HttpClient} from '@angular/common/http';
-import index from '@angular/cli/lib/cli';
 
 @Component({
   selector: 'app-map',

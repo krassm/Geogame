@@ -11,10 +11,39 @@
          (leafletClick)="updateMarker()"
          [leafletLayer]="layers">
 
-      <div *ngIf="positionIsSet then updateMap()" [leafletLayer]="layers"></div>
+      <div *ngIf="lat !== undefined then updateMarker()" [leafletLayer]="layers"></div>
 
     </div>
     <br>
     <p class="card-text">Add the name of the city here: </p>
   </div>
 </div>
+
+<form [formGroup]="validatingForm" (ngSubmit)="submit()" class="text-center border border-light p-5">
+
+  <p class="h4 mb-4">Add the point to the game</p>
+
+  <div class="form-row mb-4">
+
+    <div class="col">
+      <!-- Lat Coordinate -->
+      <div class="md-form">
+        <input mdbInput placeholder="{{lat}}" type="text" id="form1" class="form-control" formControlName="Lat">
+      </div>
+    </div>
+
+    <div class="col">
+      <!-- Lon Coordinate -->
+      <div class="md-form">
+        <input mdbInput placeholder="{{lon}}" type="text" id="form2" class="form-control" formControlName="Lon">
+      </div>
+    </div>
+  </div>
+  <!-- City Name -->
+  <input type="city" id="defaultCity" class="form-control mb-4" placeholder="City">
+  <!-- Country -->
+  <input type="country" id="defaultCounty" class="form-control" placeholder="County">
+  <!-- Submit -->
+  <button mdbBtn color="info" block="true" class="btn btn-info btn-block my-4" type="submit">Submit</button>
+  <hr>
+</form>

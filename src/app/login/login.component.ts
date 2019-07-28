@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   validate() {
-    // this is for sure not the best way
+    // this is a horrible approach to do logins
     // this class is very shady... you can also access the maintainer/contributor mode directly in the URL
     if (this.role === 'contributor' && this.password === 'password') {
       this.router.navigate(['contribute/contributor']);
