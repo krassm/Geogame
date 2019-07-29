@@ -21,11 +21,14 @@ export class MapdataService {
   constructor() { }
 
   addToData(input: Array<any>) {
-    console.log('get Location Data in the service is called');
-    const hannes = JSON.stringify(input);
+    // console.log('get Location Data in the service is called');
+    let hannes = JSON.stringify(input);
+
+    hannes = hannes.replace(/[\[\]"]+/g, '');
+    console.log('this is my hannes ' + hannes);
 
     localStorage.setItem(this.counter.toString(), hannes);
-    console.log('here is hannes: ' + hannes + ' ' + this.counter.toString());
+    // console.log('here is hannes: ' + hannes + ' ' + this.counter.toString());
     this.counter += 1;
   }
 }

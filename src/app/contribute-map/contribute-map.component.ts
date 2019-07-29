@@ -50,6 +50,7 @@ export class ContributeMapComponent implements OnInit {
     const hannes = [this.country, this.city,
       this.lat, this.lon, null, null];
     this.mapService.addToData(hannes);
+    alert(this.city + ' in ' + this.country + ' is added to the game!');
     // TODO: Clear fields after submit
   }
 
