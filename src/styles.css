@@ -1,18 +1,1 @@
-/* You can add global styles to this file, and also import other style files */
-#mapId {
-  height: 500px;
-}
 
-.btn {
-  font-size: 1rem;
-  margin-top: -5px;
-}
-.btn-answer{
-  font-size: 1rem;
-  margin-top: -5px;
-  color: cornflowerblue;
-  background-color: aliceblue;
-}
-.top-page {
-  background-color: mediumblue;
-}

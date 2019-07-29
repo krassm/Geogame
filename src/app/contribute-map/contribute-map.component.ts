@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {icon, latLng, Map, marker, tileLayer} from 'leaflet';
 import {FormControl, FormGroup} from '@angular/forms';
+import {MapdataService} from '../services/mapdata.service';
 
 @Component({
   selector: 'app-contribute-map',
@@ -16,15 +17,16 @@ export class ContributeMapComponent implements OnInit {
   zoom: any;
   city: string;
   country: string;
+  private addArray: Array<any>[];
 
   validatingForm = new FormGroup({
-    formLat: new FormControl('Lat'),
-    formLon: new FormControl('Lon'),
-    formCity: new FormControl('City'),
-    formCountry: new FormControl('Country')
+    formLat: new FormControl('lat'),
+    formLon: new FormControl('lon'),
+    city: new FormControl('city'),
+    country: new FormControl('country')
   });
 
-  constructor() {
+  constructor(private mapService: MapdataService) {
   }
 
   ngOnInit() {
@@ -42,18 +44,16 @@ export class ContributeMapComponent implements OnInit {
   submit() {
     this.validatingForm.controls.formLat.setValue(this.lat);
     this.validatingForm.controls.formLon.setValue(this.lon);
-    this.city = this.validatingForm.controls.formCity.value;
-    this.country = this.validatingForm.controls.formCountry.value;
-    // this.validate() i did not added validation of the values, because i simply hadn't enough time
-  }
+    this.city = this.validatingForm.controls.city.value;
+    this.country = this.validatingForm.controls.country.value;
 
-  addValuesToGame() {
-    // this should be moved to mapdata service
-    const array = [this.country, this.city, this.lat, this.lon, null, null];
+    const hannes = [this.country, this.city,
+      this.lat, this.lon, null, null];
+    this.mapService.addToData(hannes);
+    // TODO: Clear fields after submit
   }
 
   onMapReady(map: Map) {
-    console.log('i repeat and repeat');
     map.doubleClickZoom.disable();
     // tslint:disable-next-line:no-shadowed-variable
     map.on('click', <LeafletMouseEvent>(e) => {
@@ -75,7 +75,6 @@ export class ContributeMapComponent implements OnInit {
   }
 
   getPosition() {
-    console.log('im getting the position');
     // asynchronous
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {

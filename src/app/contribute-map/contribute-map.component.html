@@ -1,8 +1,9 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">Add and remove cities!</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Anleitung lorem ipsum, halskjdsalkdjvhjkdfla jsd ölfijsdglövkj lkj klsdf ji sf</h6>
+    <h5 class="card-title">Add a city!</h5>
+    <h6 class="card-subtitle mb-2 text-muted">To change the position of the marker, double click on the map</h6>
     <br>
+    <!-- This package is provided by Asymmetrik and its called ngx-leaflet -->
     <div leaflet class="map"
          [leafletOptions]="options"
          [(leafletZoom)]="zoom"
@@ -14,36 +15,35 @@
       <div *ngIf="lat !== undefined then updateMarker()" [leafletLayer]="layers"></div>
 
     </div>
-    <br>
-    <p class="card-text">Add the name of the city here: </p>
   </div>
 </div>
 
-<form [formGroup]="validatingForm" (ngSubmit)="submit()" class="text-center border border-light p-5">
 
-  <p class="h4 mb-4">Add the point to the game</p>
+<form [formGroup]="validatingForm" (ngSubmit)="submit()" class="text-center border border-light p-5" action="#!">
+
+  <p class="h4 mb-4">Add the name of city and country here: </p>
 
   <div class="form-row mb-4">
 
     <div class="col">
       <!-- Lat Coordinate -->
       <div class="md-form">
-        <input mdbInput placeholder="{{lat}}" type="text" id="form1" class="form-control" formControlName="Lat">
+        <input mdbInput placeholder="{{lat}}" type="text" id="form1" class="form-control" formControlName="lat">
       </div>
     </div>
 
     <div class="col">
       <!-- Lon Coordinate -->
       <div class="md-form">
-        <input mdbInput placeholder="{{lon}}" type="text" id="form2" class="form-control" formControlName="Lon">
+        <input mdbInput placeholder="{{lon}}" type="text" id="form2" class="form-control" formControlName="lon">
       </div>
     </div>
   </div>
   <!-- City Name -->
-  <input type="city" id="defaultCity" class="form-control mb-4" placeholder="City">
+  <input type="city" id="defaultCity" class="form-control mb-4" placeholder="City" formControlName="city">
   <!-- Country -->
-  <input type="country" id="defaultCounty" class="form-control" placeholder="County">
+  <input type="country" id="defaultCounty" class="form-control" placeholder="Country" formControlName="country">
   <!-- Submit -->
-  <button mdbBtn color="info" block="true" class="btn btn-info btn-block my-4" type="submit">Submit</button>
+  <button (click)="submit()" mdbBtn color="info" block="true" class="btn btn-info btn-block my-4" type="submit">Submit</button>
   <hr>
 </form>

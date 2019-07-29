@@ -7,6 +7,10 @@ import {Router} from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
+/*
+ * This is an example how not to do it
+ */
 export class LoginComponent implements OnInit {
   role: string;
   password: string;
