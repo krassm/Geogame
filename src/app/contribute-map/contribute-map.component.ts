@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {icon, latLng, Map, marker, tileLayer} from 'leaflet';
 import {FormControl, FormGroup} from '@angular/forms';
 import {MapdataService} from '../services/mapdata.service';
@@ -17,7 +17,6 @@ export class ContributeMapComponent implements OnInit {
   zoom: any;
   city: string;
   country: string;
-  private addArray: Array<any>[];
 
   validatingForm = new FormGroup({
     formLat: new FormControl('lat'),
@@ -47,9 +46,7 @@ export class ContributeMapComponent implements OnInit {
     this.city = this.validatingForm.controls.city.value;
     this.country = this.validatingForm.controls.country.value;
 
-    const hannes = [this.country, this.city,
-      this.lat, this.lon, null, null];
-    this.mapService.addToData(hannes);
+    this.mapService.addToData([this.country, this.city, this.lat, this.lon, null, null]);
     alert(this.city + ' in ' + this.country + ' is added to the game!');
     // TODO: Clear fields after submit
   }
@@ -65,7 +62,7 @@ export class ContributeMapComponent implements OnInit {
 
   updateMarker() {
       this.layers = marker([this.lat, this.lon], {
-        // This is necessary because the module hast problems with marker icons
+        // This is necessary because the module has problems with marker icons
         icon: icon({
           iconSize: [25, 41],
           iconAnchor: [13, 41],

@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { MapdataService } from './mapdata.service';
+import {MapdataService} from './mapdata.service';
 
 describe('MapdataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));

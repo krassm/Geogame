@@ -1,9 +1,4 @@
-import { Injectable } from '@angular/core';
-import * as papa from 'papaparse';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {any} from 'codelyzer/util/function';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -22,13 +17,9 @@ export class MapdataService {
 
   addToData(input: Array<any>) {
     // console.log('get Location Data in the service is called');
-    let hannes = JSON.stringify(input);
-
-    hannes = hannes.replace(/[\[\]"]+/g, '');
-    console.log('this is my hannes ' + hannes);
-
-    localStorage.setItem(this.counter.toString(), hannes);
-    // console.log('here is hannes: ' + hannes + ' ' + this.counter.toString());
+    let storedItem = JSON.stringify(input);
+    storedItem = storedItem.replace(/[\[\]"]+/g, '');
+    localStorage.setItem(this.counter.toString(), storedItem);
     this.counter += 1;
   }
 }

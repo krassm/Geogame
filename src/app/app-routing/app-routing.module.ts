@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   declarations: [],
   imports: [
     RouterModule.forRoot(
-      appRoutes, {enableTracing: true} // TODO: Remove when deliver
+      appRoutes, {enableTracing: false}
     )
   ],
   exports: [

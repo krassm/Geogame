@@ -27,7 +27,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "fs": "0.0.1-security",
-    "leaflet": "^1.5.1",
+    "leaflet": "^1.4.0",
     "ngx-bootstrap": "^4.2.0",
     "ngx-papaparse": "^3.0.3",
     "papaparse": "^5.0.0",
