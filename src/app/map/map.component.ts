@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {latLng, tileLayer} from 'leaflet';
 import * as papa from 'papaparse';
 import {HttpClient} from '@angular/common/http';
-import {MapdataService} from '../services/mapdata.service';
 
 @Component({
   selector: 'app-map',
@@ -92,7 +91,7 @@ export class MapComponent implements OnInit {
   }
 
   setMapOptions() {
-    // How to cheat:
+    // Activate cheat mode:
     // console.log('the right answer is: ' + this.rightAnswer);
     this.center = latLng(this.lat, this.lon);
     // map options are only set once
@@ -112,7 +111,7 @@ export class MapComponent implements OnInit {
 
   checkForAnswer() {
     if (document.activeElement.textContent === this.rightAnswer) {
-      window.alert('You guess write! congrats');
+      window.alert('You guessed right! congrats :)');
     } else {
       window.alert('That was wrong :( The right answer would be: ' + this.rightAnswer);
     }

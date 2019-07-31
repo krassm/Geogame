@@ -1,0 +1,37 @@
+# GeoGame
+
+GeoGame is a browser game, where you have to guess a european city based only on a
+satellite image. This project is the practical part of a subject called Applied Internet Technologies.
+There are always three choices. A user is also allowed to contribute
+locations to the game. The live position can be determined to add a point.
+Locations can also be contributed by simply double clicking on the contribution map.
+When the coordinates appear in the form below, a city and country name can be entered
+and submitted. The contributed locations are saved on the client side and are removed
+when the cache of the browser is cleared.
+
+The which are already provided are located in a csv file in the assets folder and can be
+exchanged with a larger one (e.g. cities of the world, cities of Austria ...).
+This application *only* works properly in *Morzilla Firefox* browsers.
+This application is part of the practical work for a subject c
+
+
+This project was generated with link:https://github.com/angular/angular-cli[Angular CLI]
+version 7.3.8. Special thanks to link:https://www.jetbrains.com/idea/[JetBrains] who provide
+a one year free licence of IntelliJ Ultimate to students.
+
+## Launch the Application locally
+
+* Install *node.js* and *npm*
+* Clone the project or download the zip
+* Open in IDE and run *npm install* in the same directory where package.json is placed
+* run *ng build* to build the application
+* run *ng serve* to build and serve the application. Navigate to *localhost:4200*
+in your browser to see the application.
+
+.Project Team
+|===
+|Tasks|Name
+|Code & Idea|Maria
+|Deployment|Erik
+|===
+
